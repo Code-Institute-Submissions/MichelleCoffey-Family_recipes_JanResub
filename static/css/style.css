@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pacifico&display=swap');
+
 body {
-    background-color: aqua;
+    font-family: 'Oswald', sans-serif;
 }
+
+nav ul a {
+    color: black;
+}
+
+nav .brand-logo {
+    color: black;
+    font-family: 'Pacifico', cursive;
+}
+
+.sidenav-overlay {
+    font-family: 'Pacifico', cursive;
+}
+
+i {
+    color: black;
+}
+
+
+
