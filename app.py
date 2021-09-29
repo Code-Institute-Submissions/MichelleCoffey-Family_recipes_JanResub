@@ -1,4 +1,4 @@
-import os 
+import os
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -17,10 +17,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -32,7 +33,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Oops...This Username already exists! Have you tried loging in instead?")
+            flash("Username already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -45,6 +46,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Yay... You're in. Time to start adding those family recipes.")
         return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
@@ -86,7 +88,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for(login))
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -97,8 +99,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-    port=int(os.environ.get("PORT")), 
-    debug=True)
+            port=int(os.environ.get("PORT")),
+            debug=True)
