@@ -1,108 +1,345 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Family Recipes**
+[View a live version of Family Recipes here]()
+This is the main website for *Family Recipes*. This website will allow customers to store their precious family recipes, so they are never lost again. 
+![Family Recipes on mobile, ipad, ipad pro and desk top.](images/tohkresdes.png) "The Other Hong Kong on multiple displays"
+![Family Reecipes on many types of devices and showing each page.](images/ohkresdes2.png) "The Other Hong Kong on multiple displays and showing different pages."
+## Table of Contents
+### [User Experience](#user-experience-(ux))
+#### [User Stories](#user-stories)
+* [First Time Visitor Goals](#first-time-visitor-goals)
+* [Returning Visitor Goals](#returning-visitor-goals)
+* [Frequent Visitor Goals](#frequent-visitor-goals)
 
-Welcome MichelleCoffey,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+### [Design](#design)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [Color Scheme](#color-scheme)
+* [Typography](#typography)
+* [Imagery](#imagery)
+* [Features](#features)
+* [Wireframes](#wireframes)
+### [Technologies Used](#technologies-used)
+* [Languages Used](#languages-used)
+* [Frameworks  Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+### [Deployment](#delpoyment)
+* [GitHub](#github)
+* [Cloning to Local Device](#cloning-of-repository-to-a-local-device)
+* [Setting up a google maps javascript API](#Setting-up-a-google-maps-javascript-API)
 
-`python3 -m http.server`
+### [Testing](#testing)
+### [User Stories] (#)
+[Photo story for first time user](#photo-story-for-first-time-user)
+[Bugs](#bugs)
+- [Gallery](#gallery)
+- [Navbar](#navbar)
+- [form](#form)
+- [Javascript for Maps](#javascript-for-maps)
+- [Javascript for mail](#javascript-for-mail)
+### [Acknowledgements](#acknowledgements)
+* [Media](#media)
+* [Individuals](#individuals)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+ 
+ 1. First Time Visitor Goals
+    a. A first time user will be able to register their account.This will then allow the user to add recipes to the database. These recipes can be either private or public. Those old fanily recipes can remain precious secrets. We all know that grandma may not want everyone to know what goes into her delicious lasangne. For other home cooks they may want other families to create their own memories with their recipes. 
+      
+        
+    b. The colours are classic and conjure the image of plain white paper and black ink. The cursive style font helps suggesting old fashioned hand writing. 
 
-Another blue button should appear to click: _Open Browser_.
+    The Navbar in bright white with text in black like the elegant scribblings on an old notebook. The menu goes from the center to the right and on mobile devices comes in the form of bars icon with a drop down menu on the right. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+        
+    c. Below the navbar is a illustration of cooking utensils with a  card atop explaining the reason for the database and prompting the user to register by hitting the registration button. Both registration and log in can also be accessed via 
 
-To log into the Heroku toolbelt CLI:
+    d. The Explore button in the navbar leads the user to main interactive component of the site. My clicking hikes, markers for five different hikes in hong kong will appear with details regarding difficulty and length of hike. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    e. Contact will allow the user to get info to any further details about locally organised group hikes in and around Hong Kong. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+  
+ 2. Returning Visitor Goals 
+     A returning visitor will be able to log in easily and continue to update their family cookbook. They can add and edit recipes as they go. Compiling as many recipes as they like. 
+    
+3. Frequent User Goals 
+    A frequest User will see the benefits of having their family recipes on one database. They can check the old family recipes and share it with other family members and friends. They user may also want to double check how much flour goes into that victoria sponge. This site is there to remind the user. 
+           
 
-------
+# Design 
+  ## Color Scheme  
+  * Three main colors where chosen. These colours were inspired by the image of the sun setting over Hong Kong City. The main colour is that of pink salmon
+     Colors are pinksalmon like a sunset and darkslate gray to represent the concrete jungle below.
+ ## Typography 
+    
+  * Font used is Satisfy and cursive. I wanted something relaxed and flowing. 
+ ## Imagery
+  * Images used were from Unsplash and of particilar hiking locations in Hong Kong. 
+  
+## Features
+* Responsive on all devices and have interactive elements for bookings. Icons that link to further social media updates.
 
-## Release History
+## Wireframes
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* Wireframe for the whole project. [View](assets/wireframes/tohk2021.pdf)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Homepage wireframe.](images/tohk2021.png) "Home page wireframe "
+"
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+# Technologies Used 
+## Languages Used 
+* HTML
+* CSS
+* Javascript
+## Frameworks Libraries and Programs Used 
+1. [Bootstrap](https://www.getbootstrap.com)
+  
+    Bootstrap 4.6.X:
+2. Hover.css:
+3.  [flaticon](https://www.flaticon.com/free-icons/hiking)
+    Flaticon was used to make the logo and the map markers. 
+4. [Google Fonts](https://fonts.google.com/specimen/Satisfy)
+5. [Fontawesome](https://fontawesome.com/)
+    Fontawesome was used for to get icons for utensils and aa cocktail on the feast page. 
+6. [Gitpod](https://gitpod.io/workspaces/)
+    Used gitpod to work on my repositories. 
+7. [Github](https://github.com/MichelleCoffey/A_Moveable_Feast_Shanghai/tree/1a91746d21707106faef91c699500aff9414e097)
+     GitHub is hosting my repositories. 
+8. JQuery: 
+    * Is used by Bootstrap.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+9. [Balsamiq](https://balsamiq.com/)
+    * Balsamiq was used to design and organise my WireFrames. 
+10. [TinyPNG](https://tinypng.com/)
+     * Tinypng for fomatting images, so they loaded faster.
+11. [Unsplash](https://unsplash.com/)
+    * Upsplash was used to access some stock images to add to the site and in particular the hero image and background image. 
+12. [Google Maps API](https://developers.google.com/maps)
+    * Upsplash was used to access some stock images to add to the site and in particular the galllery and carousel. 
+13. [Timeout Hong Kong](https://www.timeout.com/hong-kong/sport-and-fitness/best-hikes-hong-kong)
+    * Information for hikes around Hong Kong was taken from a TimeOut feature.
+14. [Emailjs](https://www.emailjs.com/)
+    * Emailjs was used to help the user contact the site for more information regarding hikes. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Deployment 
+### Github
+#### The repository is hosted on github and I have therefore used github pages to deploy the site. 
+  1. On Github, go to your site's repository.
+  2. Under your repository name, click settings and scroll down to Github pages. 
+  3. Under the "Github pages:", use the None or Branch drop-down menu and select a publishing source. For a Moveable Feast, the master was selected, root and both actions were saved using the save button. A theme or custom domain were not chosen at this time. 
+  4. After saving the actions. Next click the active link on the repository page on Github. Full deployment may take a minute or two, so refresh the page and be patient. 
+  
+#### Cloning of Repository to a local device.
+  1. On GitHub, again go to the main page of the repository. 
+  2. Above the ist of files, click Code. 
+  3. To clone the repository using HTTPS, under "Clone with HTTPS", click. 
+     To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click . 
+     To clone a repository using GitHub CLI, click Use GitHub CLI, then click .
+  4. Open Terminal 
+  5. Change the current working directory to the location where you want the cloned directory. 
+  6. TYpe git clone, and then paste the URL you copied eariler. 
+  7. Press Enter to create your local clone. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Cloning a repository to GitHub Desktop. 
+  1. On GitHub, navigate to the main page of the repository.
+  2. Above the list of files, click Code. 
+  3. Click  Open with GitHub Desktop to clone and open the repository with GitHub Desktop.
+  4. Follow the prompts in GitHub Desktop to complete.   
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Setting up a google maps javascript API.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  ### Creating a project
+1. To use Google Maps Platform, you must have a project to manage       services, credentials, billing, APIs, and SDKs.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+2. Billing setup is required for each project, but you will only be charged if a project exceeds its free quota.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+3. To create a Cloud project with billing enabled:
+   Create a new Google Cloud project in the Cloud Console:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    - Create new project
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    - On the New Project page, fill in the required information:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    - Project name: Accept the default or enter a customized name.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    - You can change the project name at any time. For more information, see Identifying projects.
 
-------
+    - Project ID: Accept the default or click EDIT to enter a customized ID that Google APIs use as a unique identifier for your project.
 
-## FAQ about the uptime script
+    - After you create the project, you cannot change the project ID, so choose an ID that you'll be comfortable using for the lifetime of the project. Don't include any sensitive information in your project ID.
 
-**Why have you added this script?**
+    - Billing account: Select a billing account for the project. If you haven't set up a billing account or only have one billing account, you won't see this option.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    - You must be a Billing Account Administrator or Project Billing Manager to associate a project with a billing account. For more information, see the billing access control documentation.
 
-**How will this affect me?**
+    - Location: If you have an organization you want to link your project to, click Browse and select it; otherwise, choose "No organization".
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Enabling billing
+1. To deploy your apps, you must enable billing. Your account will   not be charged if you stay within your free quota. If your application needs resources that exceed the free quota, you will be charged for the additional usage.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  2.  If you have a billing account when you create a Cloud project, then billing is automatically enabled on that project.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  3.  To enable billing on a Cloud project:
 
-**So….?**
+   - In the Cloud Console, go to the Billing page:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+   - Go to the Billing page
 
-**Can I opt out?**
+  - Select or create a Cloud  project.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  -  Depending on if a billing account exists or if the selected Cloud project is associated with an account, the Billing page displays one of the following:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  -  If billing is already enabled for the selected Cloud project, then the details about the billing account are listed.
 
-**Anything more?**
+  -  If no billing account exists, you are prompted to create a billing account and associate it with the selected Cloud project.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  -  If a billing account exists, you are prompted to enable billing if the selected Cloud project is not already associated with a billing account. You can also click Cancel and then click Create account to create and associate a new billing account.
 
----
+- After you enable billing, there is no limit to the amount that you might be charged. To gain more control over your costs, you can create a budget and set alerts. For more information, see Billing.
 
-Happy coding!
+### Creating API keys
+1. The API key is a unique identifier that authenticates requests associated with your project for usage and billing purposes. You must have at least one API key associated with your project.
+
+2. To create an API key:
+
+3. Go to the Google Maps Platform > Credentials page.
+
+4. Go to the Credentials page
+
+5. On the Credentials page, click Create credentials > API key.
+The API key created dialog displays your newly created API key.
+Click Close.
+The new API key is listed on the Credentials page under API keys.
+(Remember to restrict the API key before using it in production.)
+
+### Restricting API keys
+1. Restricting API keys adds security to your application by ensuring only authorized requests are made with your API key. We strongly recommend that you follow the instructions to set restrictions for your API keys. For more information, see API security best practices.
+
+2. To restrict an API key:
+
+3. Go to the Google Maps Platform > Credentials page.
+
+4. Go to the Credentials page
+
+- Select the API key that you want to set a restriction on. The API key property page appears.
+- Under Key restrictions, set the following restrictions:
+Application restrictions:
+To accept requests from the list of website that you supply, select HTTP referrers (web sites) from the list of Application restrictions.
+Specify one or more referrer web sites. For example, *.google.com accepts all sites ending in google.com, such as https://developers.google.com.
+Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "__file_url__" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "__file_url__//path/to/*". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
+
+4. API restrictions:
+Click Restrict key.
+Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is not listed, you need to enable it.
+If your project uses Places Library, also select Places API. Similarly, if your project uses other services in the JavaScript API (Directions Service, Distance Matrix Service, Elevation Service, and/or Geocoding Service), you must also enable and select the corresponding API in this list.
+5. To finalize your changes, click Save.
+
+### Adding the API key to your request
+- You must include an API key with every Maps JavaScript API request. In the following example, replace YOUR_API_KEY with your API key.
+
+## EmailJS
+### Connecting email service
+
+- To connect an email service:
+
+* Open Email Services (opens new window)page in EmailJS dashboard
+  Choose from the list of supported services and click on the service
+  Fill out the service details
+  Test the email service and make sure you receive the test email
+
+- To create an email template:
+
+* Open the Email Templates (opens new window)page in EmailJS dashboard
+  Click the Create New Template button
+  Fill out the template properties
+  Test the template either via the Test dialog, or by opening the auto-generated JSFiddle, which allows you to see the code example, and to easily fill out the template parameters and send the email.
+
+
+
+
+
+## Testing 
+
+### Photo story for first time user
+
+### User Stories
+
+ ![The Other Hong Kong homepage on mobile, ipad, ipad pro and desk top.](images/tohkresdes.png) "The Other Hong Kong on multiple displays"
+ 
+  ![The Other Hong Kong feast page on mobile, ipad, ipad pro and desktop.](images/find.png) "Feast page on multiple devices. "
+
+  The home page greets you with a sunset over Hong Kong and a challenge to climb the mountains you usually see on the way to work. 
+
+  
+  As the user scrolls dowm, the will find buttons the link to markers and infowindows on the map. The infowindows will introduce the more exciting part of Hong Kong, some history about the locations and the vistas you can expect to view. 
+
+
+  ![The Other Hong Kong contact page on mobile, ipad, ipad pro and desktop.](images/contactpage.png) "Contact page on multiple devices. "
+
+  The user will have the oppourtunity to register there interest in hikes. 
+
+![successful validation confirmation](images/homevalidator.png) "Home Page HTML success."
+
+W3C CSS Validator Services was used to validate CSS.
+
+![successful validation confirmation](images/cssvalidator.png) "Home Page HTML success."
+ * the flexbox that was pinged was actually necassary for the image and remained in the CSS.
+
+![successful validation confirmation](images/mapjsval.png) "Home Page HTML success."
+
+![successful validation confirmation](images/mailjsval.png) "Home Page HTML success."
+
+![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](images/lighthouse.png) "Lighthouse score for the websites user efficency."
+
+### Bugs
+#### Gallery
+
+1. Images were a little big so I used tinypng to compress them. 
+2. I used an hiking icon in the map and I got and figured out how to use this by downloading a small px hiker. 
+
+#### Navbar
+* Had a glitch that made the toggler appear at all times. This was remedied by comparing my code and bootstraps code for responsive togglers. I was able to find the error in the html. 
+ #### Form 
+ * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
+
+ #### Javascript for Maps
+
+ * My mentor recommended a youtube tutorial by Sam Codes that help with my ideas and intial coding for markers and infowindows. 
+
+ [Sam Codes](https://www.youtube.com/watch?v=uPhWSyRqQDA)
+
+ * I then needed to link the buttons with the markers and infowindows. This was helped with tutors and with Stackoverflow onclick explanations. This caused an issue when I put function within let markers within the init map function when it needed to go before it.
+
+ * Finally I needed to make sure a window would close when a new one was opened. This was also achieved by looking at another W3schools tutorial. [Stackoverflow](https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows)
+
+ #### Javascript for Mail
+ * My initial mail wouldn't work or was sending it when the page opened, without any input. I then had to add windowonload before the function and this worked. 
+## Acknowledgements
+### Media
+* Code Institute Tutorials for providing a jumping off block. 
+ * Slack for being a great source of help with either googling or when other students have provided suggestions to help improve your work. 
+ * Code Institute Tutorials. 
+ ### Individuals
+ * My Mentor, Precious Ijege. 
+ * Tutors at Code Institute are great guiding hand.   They do not give you the answer but ask the right questions to lead you down the correct path. It also helps build confidence. 
+ * Anne Greaves and Code Institute for a comprehensive guide to writing README.md. The template was taken from the Code Institute Guide to writing README and how to write Markdown.
+ * I have also used elements and the template of my first read, such as the table of contents. 
+ * Alex Harvey, a guide to writing a table of contents in gitpod. 
+
+
+#### Code
+ As mentioned in bugs. 
+ * My mentor recommended a youtube tutorial by Sam Codes that help with my ideas and intial coding for markers and infowindows. 
+
+ [Sam Codes](https://www.youtube.com/watch?v=uPhWSyRqQDA)
+
+ * I then needed to link the buttons with the markers and infowindows. This was helped with tutors and with Stackoverflow onclick explanations. This caused an issue when I put function within let markers within the init map function when it needed to go before it.
+
+ * Finally I needed to make sure a window would close when a new one was opened. This was also achieved by looking at another W3schools tutorial. [Stackoverflow](https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows)
+
+ #### Javascript for Mail
+ * My initial mail wouldn't work or was sending it when the page opened, without any input. I then had to add windowonload before the function and this worked. 

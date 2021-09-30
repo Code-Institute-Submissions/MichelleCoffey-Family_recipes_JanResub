@@ -29,7 +29,7 @@
                 <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Add Recipe</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                     <li><a href="#">Edit Recipe</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
@@ -46,7 +46,7 @@
         <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href="#">Add Recipe</a></li>
+            <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
             <li><a href="#">Edit Recipe</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
@@ -86,22 +86,22 @@
     
         </div>
             
-        <div class="col l3 s12">
-              <h5 class="white-text right-align">Social</h5>
-              <ul class="right-align">
-                <li><a class="white-text right" href="#!">Link 1</a></li>
-                <li><a class="white-text right" href="#!">Link 2</a></li>
-                <li><a class="white-text right" href="#!">Link 3</a></li>
-                <li><a class="white-text right" href="#!">Link 4</a></li>
-              </ul>
+        <div class="col l4 offset-l2 s12 m6 center-align">
+            <h5 class="social-heading">Social Links</h5>
+            <div class="social-box">
+                <a class="social-links" href="https://www.facebook.com/" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a class="social-links" href="https://www.instagram.com/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="social-links" href="https://twitter.com/?lang=en-gb" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="social-links" href="https://wechat.com/?lang=en-gb" target="_blank"><i 
+                        class="fab fa-weixin"></i></a>
+                        
             </div>
           </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-          </div>
-        </div>
+        
+        
       </footer>  
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
