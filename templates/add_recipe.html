@@ -4,7 +4,7 @@
 <h3 class="center-align black-text">Add Recipe</h3>
 
 <div class="row">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-file-signature prefix"></i>
@@ -52,10 +52,16 @@
                           Is not gluten free.
                         </label>
                     </div>
-                    
                 </div>
             </div>  
-       
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light btn-large" type="submit">Submit
+                    <i class="fas fa-paper-plane right"></i>
+                  </button>
+                        
+            </div>
+        </div>
     </form>
 </div>
 
