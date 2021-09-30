@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align black-text">Edit Recipe</h3>
+
+<div class="row">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-file-signature prefix"></i>
+                <input id="recipe_name" name="recipe_name" type="text" class="validate" 
+                    minlength="5" maxlength="50" required>
+                <label for="recipe_name">Recipe Name:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-check-square prefix"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Recipe Category</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-clipboard-list prefix"></i>
+                <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                <label for="recipe_ingredients">Ingredients:</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-mortar-pestle prefix"></i>
+                <textarea id="recipe_method" name="recipe_method" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                <label for="recipe_method">Method:</label>
+            </div>
+        </div>   
+        
+                <div class="input-field col s12">
+                    <div class="switch">
+                        <i class="fas fa-bread-slice prefix"></i>
+                        <label for="is_not_gluten_free">
+                          
+                          <input type="checkbox" id="is_not_gluten_free" name="is_not_gluten_free">
+                          <span class="lever"></span>
+                          Is not gluten free.
+                        </label>
+                    </div>
+                </div>
+            </div>  
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn waves-effect waves-light btn-large" type="submit">Edit
+                    <i class="fas fa-edit right"></i>
+                  </button>
+                        
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
