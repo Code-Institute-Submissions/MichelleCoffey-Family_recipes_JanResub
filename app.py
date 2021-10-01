@@ -107,6 +107,8 @@ def add_recipe():
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_img": request.form.get("recipe_img"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
             "is_not_gluten_free": is_not_gluten_free,
@@ -128,6 +130,8 @@ def edit_recipe(recipe_id):
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_img": request.form.get("recipe_img"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
             "is_not_gluten_free": is_not_gluten_free,

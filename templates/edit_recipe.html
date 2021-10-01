@@ -16,6 +16,19 @@
                 </div>
             </div>
 
+      <!--Description-->
+
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="fas fa-heart prefix"></i>
+            <textarea id="recipe_description" name="recipe_description" minlength="5"
+                    maxlength="500" class="materialize-textarea validate" required></textarea>
+            <label for="recipe_description">Description:</label>
+        </div>
+    </div>
+
+        
+
     <!--Category-->
             <div class="row">
                 <div class="input-field col s12">
@@ -34,6 +47,20 @@
                     <label for="category_name">Recipe Category</label>
                 </div>
             </div>
+
+    <!--Image Url-->
+
+
+    <div class="row">
+        <div class="input-field col s12">
+            <i class="fas fa-camera-retro prefix"></i>
+            <input id="recipe_img" name="recipe_img" maxlength="5000"
+                type="url" class="validate" aria-describedby="recipe_img" pattern="https?://.+" onchange="recipeImg();">
+            <label for="recipe_img">Recipe Image <em>Copy and paste image url or use our default image by skipping this step</em></label>
+        </div>
+    </div>
+
+   
 
     <!--Ingredients-->
             <div class="row">

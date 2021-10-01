@@ -21,7 +21,7 @@ i {
     color: black;
 }
 
-.center-align {
+.brand-logo {
     font-family: 'Pacifico', cursive;
 }
 
@@ -55,6 +55,10 @@ i {
 .class {
 
     padding: 20px;
+}
+
+.card-content {
+    font-family: 'Oswald', sans-serif;
 }
 
 
