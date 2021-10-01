@@ -24,7 +24,7 @@ def home():
     home = mongo.db.home.find()
     return render_template("home.html", home=home)
 
-    
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -158,6 +158,12 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe succesfully deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/full_recipe/<recipe_id>")
+def full_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("full_recipe.html", recipe=recipe)
 
 
 if __name__ == "__main__":

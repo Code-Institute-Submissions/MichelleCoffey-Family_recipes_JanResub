@@ -22,7 +22,43 @@
 
     <h3 class="center-align black-text">Recipes</h3>
 
-    
-   
-
+    <section class="recipes">
+      <div class="row">
+          <div class="col s12 m6 l6 xl4">
+              <div class="card large recipe-card">
+                  <div class="card-image">
+                    <img src="static/images/scones.jpg" alt="scones with cream">
+                    <span class="card-title"></span>
+                  </div>
+                  <div class="card-content content center-align">
+                    <h5 class="recipe-heading">Nana's Scones</h5>
+                    <p>She would happily tell you that noone made a better scone.</p>
+                    <span><em>By: Anna</em></span>
+                  </div>
+                  <div class="card-action btn-box center-align">
+                    <a class="full-recipe-btn text-shadow"
+                        href="{{ url_for('get_recipes') }}">Recipes</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l6 xl4">
+                <div class="card large recipe-card">
+                    <div class="card-image">
+                      <img src="static/images/scones.jpg" alt="scones with cream">
+                      <span class="card-title"></span>
+                    </div>
+                    <div class="card-content content center-align">
+                      <h5 class="recipe-heading">Nana's Scones</h5>
+                      <p>She would happily tell you that noone made a better scone.</p>
+                      <span><em>By: Anna</em></span>
+                    </div>
+                    <div class="card-action btn-box center-align">
+                      <a class="full-recipe-btn text-shadow"
+                          href="{{ url_for('get_recipes') }}">Recipes</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </section>
+           
 {% endblock %}
