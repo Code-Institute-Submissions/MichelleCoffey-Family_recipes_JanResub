@@ -11,7 +11,7 @@
               <h5 class="header col s12 light teal">A place to save those important family recipes. Your recipes can be catalogued and saved for the future, making sure Mamma's chicken soup and grandpa's roast spuds is never lost again.</h5>
             </div>
             <div class="row center">
-              <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Register</a>
+              <a href="{{ url_for('register') }}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Register</a>
             </div>
             <br><br>
     
@@ -21,9 +21,10 @@
     </div>
 
     <h3 class="center-align black-text">Recipes</h3>
+
     
     <div class="row">
-      
+
       <div class="col s12 m8 offset-m2">
         <div class="card">
           {% for recipe in recipes %}
@@ -39,16 +40,17 @@
             <p><em>by: {{ recipe.created_by }}</em></p>
             <div class="col s6">
               <i class="fas fa-caret-down"></i>
-            {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-              </div>
-              <div class="col s6">
-                <i class="fas fa-caret-down"></i>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small light-blue lighten-1">Delete</a>
-            {% endif %}
-        </div>
+              {% if session.user|lower == recipe.created_by|lower %}
+              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                class="btn-small light-blue lighten-1">Edit</a>
+            </div>
+            <div class="col s6">
+              <i class="fas fa-caret-down"></i>
+              <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                class="btn-small light-blue lighten-1">Delete</a>
+              {% endif %}
+            </div>
           </div>
-          
           {% endfor %}
         </div>
         
