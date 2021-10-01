@@ -1,64 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-          <div class="container">
-            <br><br>
-            <h1 class="header center teal-text text-lighten-2">Family Recipes</h1>
-            <div class="row center">
-              <h5 class="header col s12 light teal">A place to save those important family recipes. Your recipes can be catalogued and saved for the future, making sure Mamma's chicken soup and grandpa's roast spuds is never lost again.</h5>
-            </div>
-            <div class="row center">
-              <a href="{{ url_for('register') }}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Register</a>
-            </div>
-            <br><br>
     
-          </div>
-        </div>
-        <div class="parallax"><img src="static/images/heroimage.png" alt="illustrated image of people with cooking utensils" style="transform: translate3d(-50%, 199.705px, 0px); opacity: 1;"></div>
-    </div>
 
-    <h3 class="center-align black-text">Recipes</h3>
-
-    
     <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel">
+                <h3 class="center-align teal">
+                    {{ username }}'s Recipes
+                </h3>
 
-      <div class="col s12 m8 offset-m2">
-        <div class="card">
-          {% for recipe in recipes %}
-          <div class="card-image">
-              {% if recipe.recipe_img %}  
-                <img src="{{ recipe.recipe_img }}">
-              {% else %}
-                <img class="responsive-img" alt="table full of brunch food" src="static/images/scones.jpg">
-              {% endif %}
-            
-          </div>
-          <div class="card-content">
-            <h5>{{ recipe.recipe_name }}</h5>
-            
-            <p> {{ recipe.recipe_description }}</p>
-            
-            <p><em>by: {{ recipe.created_by }}</em></p>
-            <div class="col s6">
-              
-              {% if session.user|lower == recipe.created_by|lower %}
-              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                class="btn-small light-blue lighten-1">Edit</a>
+                <div class="row">
+                    <div class="col s12 offset">
+                      <div class="card">
+                        {% for recipe in recipes %}
+                          <div class="card-image">
+                            {% if recipe.recipe_img %}  
+                              <img src="{{ recipe.recipe_img }}">
+                            {% else %}
+                              <img class="responsive-img" alt="table full of brunch food" src="static/images/scones.jpg">
+                            {% endif %}
+                          </div>
+                          <div class="card-content">
+                            <h5>{{ recipe.recipe_name }}</h5>
+                            <p> {{ recipe.recipe_description }}</p>
+                            <p><em>by: {{ recipe.created_by }}</em></p>
+                          <div class="row">
+                          <div class="col s6">
+                            
+                            {% if session.user|lower == recipe.created_by|lower %}
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                              class="btn-small light-blue lighten-1">Edit</a>
+                          </div>
+                          <div class="col s6">
+                            
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                              class="btn-small light-blue lighten-1">Delete</a>
+                              {% endif %}
+                          </div>
+                        </div>
+                        </div>
+                        {% endfor %}  
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
+                
             </div>
-            <div class="col s6">
-              
-              <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                class="btn-small light-blue lighten-1">Delete</a>
-              {% endif %}
-            </div>
-          </div>
-          {% endfor %}
         </div>
-        
-      </div>
     </div>
+
+    
 
 {% endblock %}

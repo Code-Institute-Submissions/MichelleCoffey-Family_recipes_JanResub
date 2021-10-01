@@ -52,13 +52,19 @@ i {
     font-size: 2rem;
 }
 
-.class {
-
-    padding: 20px;
+.card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-content {
     font-family: 'Oswald', sans-serif;
+}
+
+.card .card-content {
+    padding: 40px;
+    border: 10px;
 }
 
 
