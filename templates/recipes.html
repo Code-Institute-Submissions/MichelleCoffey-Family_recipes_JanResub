@@ -3,54 +3,54 @@
 
     
 
-    <div class="row">
+  <div class="row">
         <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
+          
+            
                 <h3 class="center-align teal">
-                    {{ username }}'s Recipes
+                    My Recipes
                 </h3>
+              </div>
+            </div>
 
+            {% if recipes|length > 0 %}
+            <section class="recipes">
                 <div class="row">
-                    <div class="col s12 offset">
-                      <div class="card">
-                        {% for recipe in recipes %}
-                          <div class="card-image">
-                            {% if recipe.recipe_img %}  
-                              <img src="{{ recipe.recipe_img }}">
-                            {% else %}
-                              <img class="responsive-img" alt="table full of brunch food" src="static/images/scones.jpg">
-                            {% endif %}
-                          </div>
-                          <div class="card-content">
-                            <h5>{{ recipe.recipe_name }}</h5>
-                            <p> {{ recipe.recipe_description }}</p>
-                            <p><em>by: {{ recipe.created_by }}</em></p>
-                          <div class="row">
-                          <div class="col s6">
-                            
-                            {% if session.user|lower == recipe.created_by|lower %}
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                              class="btn-small light-blue lighten-1">Edit</a>
-                          </div>
-                          <div class="col s6">
-                            
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                              class="btn-small light-blue lighten-1">Delete</a>
-                              {% endif %}
-                          </div>
-                        </div>
-                        </div>
-                        {% endfor %}  
-                      </div>
-                      
-                    </div>
-                  </div>
+                    {% for recipe in recipes %}
+                            <div class="col s12 m6 l6 xl4">
+                                <div class="card large recipe-card">
+                                    <div class="card-image">
+                                        <img src="{{ recipe.recipe_img }}" alt="{{ recipe.recipe_name }}">
+                                        <span class="card-title">{{ recipe.category }}</span>
+                                    </div>
+                                    <div class="card-content content center-align">
+                                        <h5 class="recipe-heading">{{ recipe.recipe_name }}</h5>
+                                        <p> {{ recipe.recipe_description }}</p>
+
+                                        <span><em>By: {{ recipe.created_by }}</em></span>
+                                  
+                                    </div>
+                                    <div class="card-action btn-box center-align">
+                                        <a class="full-recipe-btn text-shadow"
+                                            href="#">Full Recipe</a>
+                                    </div>
+                                </div>
+                            </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% else %}
+            <div class="row no-results-row valign-wrapper">
+                <div class="col s12">
+                    <h3 class="center-align no-results-heading">No Results found <span>🤔</span></h3>
+                </div>
+            </div>
+        {% endif %}
+        
 
 
                 
-            </div>
-        </div>
-    </div>
+ 
 
     
 
