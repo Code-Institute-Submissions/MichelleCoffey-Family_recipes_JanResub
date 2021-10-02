@@ -11,6 +11,7 @@ nav ul a {
 nav .brand-logo {
     color: black;
     font-family: 'Pacifico', cursive;
+    padding-left: 10px;
 }
 
 .sidenav-overlay {
