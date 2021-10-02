@@ -94,15 +94,17 @@ This is the main website for *Family Recipes*. This website will allow customers
 ## Languages Used 
 * HTML
 * CSS
-* Javascript
+* Jquery
+* Python
 ## Frameworks Libraries and Programs Used 
-1. [Bootstrap](https://www.getbootstrap.com)
+1. [Materializecss](https://materializecss.com/)
   
-    Bootstrap 4.6.X:
-2. Hover.css:
-3.  [flaticon](https://www.flaticon.com/free-icons/hiking)
-    Flaticon was used to make the logo and the map markers. 
-4. [Google Fonts](https://fonts.google.com/specimen/Satisfy)
+    Materialize CSS
+
+3. [MongoDB](https://account.mongodb.com/account/login?signedOut=true)
+
+    Database usedto store recipes and site info.  
+4. [Google Fonts](https://fonts.google.com/specimen/Pacifico?preview.text=Pacifico&preview.text_type=custom&query=Pacifico)
 5. [Fontawesome](https://fontawesome.com/)
     Fontawesome was used for to get icons for utensils and aa cocktail on the feast page. 
 6. [Gitpod](https://gitpod.io/workspaces/)
@@ -118,15 +120,23 @@ This is the main website for *Family Recipes*. This website will allow customers
      * Tinypng for fomatting images, so they loaded faster.
 11. [Unsplash](https://unsplash.com/)
     * Upsplash was used to access some stock images to add to the site and in particular the hero image and background image. 
-12. [Google Maps API](https://developers.google.com/maps)
-    * Upsplash was used to access some stock images to add to the site and in particular the galllery and carousel. 
-13. [Timeout Hong Kong](https://www.timeout.com/hong-kong/sport-and-fitness/best-hikes-hong-kong)
-    * Information for hikes around Hong Kong was taken from a TimeOut feature.
-14. [Emailjs](https://www.emailjs.com/)
-    * Emailjs was used to help the user contact the site for more information regarding hikes. 
+12. [Shutterstock](https://www.shutterstock.com/)
+    * Shutterstock was used for the heroimage. 
+13. [BBC FOOD](https://www.bbc.co.uk/food)
+    * Recipes.
+
 
 ## Deployment 
 ### Github
+
+### Requirements 
+  1. Github account
+  2. Gitpod account
+  3. Mongo db account
+  4. Flask 
+  5. heroku account
+
+
 #### The repository is hosted on github and I have therefore used github pages to deploy the site. 
   1. On Github, go to your site's repository.
   2. Under your repository name, click settings and scroll down to Github pages. 
@@ -144,119 +154,47 @@ This is the main website for *Family Recipes*. This website will allow customers
   6. TYpe git clone, and then paste the URL you copied eariler. 
   7. Press Enter to create your local clone. 
 
-#### Cloning a repository to GitHub Desktop. 
-  1. On GitHub, navigate to the main page of the repository.
-  2. Above the list of files, click Code. 
-  3. Click  Open with GitHub Desktop to clone and open the repository with GitHub Desktop.
-  4. Follow the prompts in GitHub Desktop to complete.   
+#### Working with Gitpod
+  1. Install all of the requirements. In the termianl window type pip3 install -r requirements.txt.
+  2. Create a databae in Mongo db. 
+      * Sign up if needed. 
+      * Create and cluster and a database. 
+      * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values. 
+  3. Create the variables. 
+    * Create a gitignore file and create and env.py file. 
+    * Add environment variables. 
 
-#### Setting up a google maps javascript API.
+                  Import os
+              os.environ.setdefault("IP", "Added by developer")
+              os.environ.setdefault("PORT", "Added by developer")
+              os.environ.setdefault("SECRET_KEY", "Added by developer")
+              os.environ.setdefault("MONGO_URI", "Added by developer")
+              os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+          
+    #### Heroku Deployment
 
-  ### Creating a project
-1. To use Google Maps Platform, you must have a project to manage       services, credentials, billing, APIs, and SDKs.
+    1. In terminal window type pip3 freeze -- local > requirements.txt.
+       * Then write python app.py > Procfile. This file is needed by Heroku. 
+    2. Create a Heroku account. 
+    3. Choose deployment method via Github. Search your github using the name of your repository name. 
+       *  Click on the repository to connect with it. 
+       * Add Config Vars in settings. 
+       * ENTER IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME.
+    4. Push requirements.txt and Profile from gitpod. 
+    5. Use Automatic Deployment on Heroku and Deploy Branch
 
-2. Billing setup is required for each project, but you will only be charged if a project exceeds its free quota.
+                            
 
-3. To create a Cloud project with billing enabled:
-   Create a new Google Cloud project in the Cloud Console:
 
-    - Create new project
 
-    - On the New Project page, fill in the required information:
+  
 
-    - Project name: Accept the default or enter a customized name.
 
-    - You can change the project name at any time. For more information, see Identifying projects.
 
-    - Project ID: Accept the default or click EDIT to enter a customized ID that Google APIs use as a unique identifier for your project.
 
-    - After you create the project, you cannot change the project ID, so choose an ID that you'll be comfortable using for the lifetime of the project. Don't include any sensitive information in your project ID.
 
-    - Billing account: Select a billing account for the project. If you haven't set up a billing account or only have one billing account, you won't see this option.
 
-    - You must be a Billing Account Administrator or Project Billing Manager to associate a project with a billing account. For more information, see the billing access control documentation.
 
-    - Location: If you have an organization you want to link your project to, click Browse and select it; otherwise, choose "No organization".
-
-### Enabling billing
-1. To deploy your apps, you must enable billing. Your account will   not be charged if you stay within your free quota. If your application needs resources that exceed the free quota, you will be charged for the additional usage.
-
-  2.  If you have a billing account when you create a Cloud project, then billing is automatically enabled on that project.
-
-  3.  To enable billing on a Cloud project:
-
-   - In the Cloud Console, go to the Billing page:
-
-   - Go to the Billing page
-
-  - Select or create a Cloud  project.
-
-  -  Depending on if a billing account exists or if the selected Cloud project is associated with an account, the Billing page displays one of the following:
-
-  -  If billing is already enabled for the selected Cloud project, then the details about the billing account are listed.
-
-  -  If no billing account exists, you are prompted to create a billing account and associate it with the selected Cloud project.
-
-  -  If a billing account exists, you are prompted to enable billing if the selected Cloud project is not already associated with a billing account. You can also click Cancel and then click Create account to create and associate a new billing account.
-
-- After you enable billing, there is no limit to the amount that you might be charged. To gain more control over your costs, you can create a budget and set alerts. For more information, see Billing.
-
-### Creating API keys
-1. The API key is a unique identifier that authenticates requests associated with your project for usage and billing purposes. You must have at least one API key associated with your project.
-
-2. To create an API key:
-
-3. Go to the Google Maps Platform > Credentials page.
-
-4. Go to the Credentials page
-
-5. On the Credentials page, click Create credentials > API key.
-The API key created dialog displays your newly created API key.
-Click Close.
-The new API key is listed on the Credentials page under API keys.
-(Remember to restrict the API key before using it in production.)
-
-### Restricting API keys
-1. Restricting API keys adds security to your application by ensuring only authorized requests are made with your API key. We strongly recommend that you follow the instructions to set restrictions for your API keys. For more information, see API security best practices.
-
-2. To restrict an API key:
-
-3. Go to the Google Maps Platform > Credentials page.
-
-4. Go to the Credentials page
-
-- Select the API key that you want to set a restriction on. The API key property page appears.
-- Under Key restrictions, set the following restrictions:
-Application restrictions:
-To accept requests from the list of website that you supply, select HTTP referrers (web sites) from the list of Application restrictions.
-Specify one or more referrer web sites. For example, *.google.com accepts all sites ending in google.com, such as https://developers.google.com.
-Note: file:// referers need a special representation to be added to the key restriction. The "file://" part should be replaced with "__file_url__" before being added to the key restriction. For example, "file:///path/to/" should be formatted as "__file_url__//path/to/*". After enabling file:// referers, it is recommended you regularly check your usage, to make sure it matches your expectations.
-
-4. API restrictions:
-Click Restrict key.
-Select Maps JavaScript API from Select APIs dropdown. If the Maps JavaScript API is not listed, you need to enable it.
-If your project uses Places Library, also select Places API. Similarly, if your project uses other services in the JavaScript API (Directions Service, Distance Matrix Service, Elevation Service, and/or Geocoding Service), you must also enable and select the corresponding API in this list.
-5. To finalize your changes, click Save.
-
-### Adding the API key to your request
-- You must include an API key with every Maps JavaScript API request. In the following example, replace YOUR_API_KEY with your API key.
-
-## EmailJS
-### Connecting email service
-
-- To connect an email service:
-
-* Open Email Services (opens new window)page in EmailJS dashboard
-  Choose from the list of supported services and click on the service
-  Fill out the service details
-  Test the email service and make sure you receive the test email
-
-- To create an email template:
-
-* Open the Email Templates (opens new window)page in EmailJS dashboard
-  Click the Create New Template button
-  Fill out the template properties
-  Test the template either via the Test dialog, or by opening the auto-generated JSFiddle, which allows you to see the code example, and to easily fill out the template parameters and send the email.
 
 
 

@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pacifico&display=swap');
 
+/* Main body */
+
 body {
     font-family: 'Oswald', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Navbar and sidebar */
 
 nav ul a {
     color: black;
@@ -18,13 +29,17 @@ nav .brand-logo {
     font-family: 'Pacifico', cursive;
 }
 
+.brand-logo {
+    font-family: 'Pacifico', cursive;
+}
+
+/* icons throughout site */
+
 i {
     color: black;
 }
 
-.brand-logo {
-    font-family: 'Pacifico', cursive;
-}
+/* A template from materialize */
 
 .parallax-container {
     min-height: 380px;
@@ -32,22 +47,20 @@ i {
     height: fit-content;
     color: black;
     font-family: 'Pacifico', cursive;
-  }
+}
 
 .parallax-container .section {
       width: 100%;
 }
-  
-@media only screen and (max-width : 992px) {
-.parallax-container .section {
-    position: absolute;
-    top: 40%;
-}
+
+/* Flashes for login and register. */ 
 
 .flashes h4 {
     line-height: 3;
     font-family: 'Oswald', sans-serif;
 }
+
+/* Cards for recipes */
 
 .card {
     padding-top: 20px;
@@ -65,15 +78,7 @@ i {
 }
 
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-main {
-    flex: 1 0 auto;
-  }
+/* footer */
 
 .page-footer i {
     color: white;
@@ -86,6 +91,8 @@ main {
     padding: 10px;
 }
 
+/* media queries for ssmaller devices */
+
 @media only screen and (max-width: 992px)
 {
 nav .brand-logo {
@@ -93,13 +100,18 @@ nav .brand-logo {
 }
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (max-width: 568px)
+{
 nav .brand-logo {
     padding-left: 0;
     font-size: 25px;
 }
 }
+
+@media only screen and (max-width : 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+}
+}
+
