@@ -28,7 +28,7 @@ i {
 .parallax-container {
     min-height: 380px;
     line-height: 0;
-    height: auto;
+    height: fit-content;
     color: black;
     font-family: 'Pacifico', cursive;
   }
@@ -46,10 +46,6 @@ i {
 .flashes h4 {
     line-height: 3;
     font-family: 'Oswald', sans-serif;
-}
-
-.social-box i {
-    font-size: 2rem;
 }
 
 .card {
@@ -74,6 +70,17 @@ body {
     flex-direction: column;
   }
 
-  main {
+main {
     flex: 1 0 auto;
   }
+
+.page-footer i {
+    color: white;
+    
+}
+
+.page-footer i {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
