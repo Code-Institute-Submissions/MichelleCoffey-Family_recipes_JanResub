@@ -338,5 +338,7 @@ W3C CSS Validator Services was used to validate CSS.
 
  * Shutterstock for land page hero image by Iryn.
 
+ * Parallax template from materialize for home page.
+
  
  
