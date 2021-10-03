@@ -20,6 +20,7 @@ This is the main website for *Family Recipes*. This website will allow customers
 * [Typography](#typography)
 * [Imagery](#imagery)
 * [Features](#features)
+* [Defensive Design](#Defensive_Design)
 * [Wireframes](#wireframes)
 ### [Technologies Used](#technologies-used)
 * [Languages Used](#languages-used)
@@ -95,13 +96,33 @@ This is the main website for *Family Recipes*. This website will allow customers
 ## Features
 * Responsive on all devices. To be able to add recipes to a database that are then shared online. Allowing Icons that link to further social media updates.
 
+## Defensive Design
+
+* The user must log in or register to see the full recipes. 
+
+* Passwords are used with WerkZeug to protect the user. 
+
+* You can only add, edit and delete your own recipes. 
+
+* The passswordmust contain between 5-20 characters. 
+
+* Recipes must also contain characters. 
+
+* Image Url must contain http:// or https://.
+
+
+## Database Schema 
+
+![successful validation confirmation](static/testing/schema.png) "Sample of Schema for database."
+
+
+
+
+
 ## Wireframes
 
-* Wireframe for the whole project. [View](assets/wireframes/tohk2021.pdf)
+* Wireframe for the whole project. [View](wireframes/recipes.pdf)
 
-
-![Homepage wireframe.](images/tohk2021.png) "Home page wireframe "
-"
 
 # Technologies Used 
 ## Languages Used 
@@ -224,12 +245,12 @@ W3C CSS Validator Services was used to validate CSS.
 ![successful validation confirmation](static/testing/csstest.png) "CSS Validation."
  * This was successful.
 
- ![successful validation confirmation](static/testing/pep8.png) "Home Page HTML success."
+ ![successful validation confirmation](static/testing/pep8.png) "Pep8 Python testing."
  * This was successful but there was white space on blank like that would not change.
 
-![successful validation confirmation](static/images/mapjsval.png) "Home Page HTML success."
 
-![successful validation confirmation](static/images/mailjsval.png) "Home Page HTML success."
+
+![successful validation confirmation](static/testing/htmlval.png) "Home Page HTML success."
 
 ![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](static/testing/lighthouse.png) "Lighthouse score for the websites user efficency."
 
@@ -275,7 +296,8 @@ W3C CSS Validator Services was used to validate CSS.
 
  * Lazy Vegan for how to deal with images in the database by  Jenny Malone.
 
- * Juan Stelling for breaktasty for examples of README. 
+
+ * Juan Stelling and breaktasty the ingredients section how to split the ingrediemts into lines. 
 
  ### Credits 
 
