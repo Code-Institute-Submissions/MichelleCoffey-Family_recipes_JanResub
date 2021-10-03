@@ -21,6 +21,8 @@
             </div>
         </div>
 
+        <!-- Ingredients  -->
+
         <div class="row">
             <div class="col s12">
                 <h4>Ingredients</h4>
@@ -32,6 +34,8 @@
                     {% endfor %}
                 </ul>
             </div>
+
+            <!-- Gluten free note -->
             <div class="col s12">
                 <h4 class="teal-text"><strong>Is Gluten Free</strong> : {{ recipe.is_not_gluten_free }}</h4>
                 {% if recipe.is_not_gluten_free == "on" %}
@@ -39,11 +43,15 @@
                         data-position="right" data-tooltip="URGENT!"></i>
                 {% endif %}
             </div>
+
+            <!-- Method  -->
             <div class="col s12">
                 <h4>Method</h4>
                 <p>{{ recipe.recipe_method }}</p>
             </div>
             <div class="col s6">
+
+            <!-- Buttons to edit or delete  -->
                 
                 {% if session.user|lower == recipe.created_by|lower %}
                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="center-align waves-effect waves-light btn-large"><i class="far fa-edit"></i> Edit</a>

@@ -4,9 +4,9 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    display: flex;
     min-height: 100vh;
     flex-direction: column;
+   
 }
 
 main {
@@ -47,6 +47,7 @@ i {
     height: fit-content;
     color: black;
     font-family: 'Pacifico', cursive;
+    display: flex;
 }
 
 .parallax-container .section {
@@ -62,23 +63,21 @@ i {
 
 /* Cards for recipes */
 
-.card {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-}
+
 
 .card-content {
     font-family: 'Oswald', sans-serif;
 }
 
-.card .card-content {
-    padding: 40px;
-    border: 10px;
-}
+
 
 
 /* footer */
+
+.page-footer {
+    flex-direction: column;
+    display: flex;
+}
 
 .page-footer i {
     color: white;
