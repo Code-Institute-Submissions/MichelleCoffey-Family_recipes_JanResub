@@ -1,8 +1,8 @@
 # **Family Recipes**
 [View a live version of Family Recipes here]()
 This is the main website for *Family Recipes*. This website will allow customers to store their precious family recipes, so they are never lost again. 
-![Family Recipes on mobile, ipad, ipad pro and desk top.](images/tohkresdes.png) "The Other Hong Kong on multiple displays"
-![Family Reecipes on many types of devices and showing each page.](images/ohkresdes2.png) "The Other Hong Kong on multiple displays and showing different pages."
+![Family Recipes on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays"
+
 ## Table of Contents
 ### [User Experience](#user-experience-(ux))
 #### [User Stories](#user-stories)
@@ -71,16 +71,16 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 # Design 
   ## Color Scheme  
-  * Three main colors where chosen. These colours were inspired by the image of the sun setting over Hong Kong City. The main colour is that of pink salmon
+  * Three main colors where chosen. White background, black font like a notebook and teal buttons. Red button for deletion. 
      Colors are pinksalmon like a sunset and darkslate gray to represent the concrete jungle below.
  ## Typography 
     
-  * Font used is Satisfy and cursive. I wanted something relaxed and flowing. 
+  * Font used is Pacifico and cursive for logo and Oswald for the main body.  Pacifico font is to conjure the image of a notebook.
  ## Imagery
-  * Images used were from Unsplash and of particilar hiking locations in Hong Kong. 
+  * Images used were from Unsplash, BBC Food URLs and the main hero image is fro Shutterstock.
   
 ## Features
-* Responsive on all devices and have interactive elements for bookings. Icons that link to further social media updates.
+* Responsive on all devices. To be able to add recipes to a database that are then shared online. Allowing Icons that link to further social media updates.
 
 ## Wireframes
 
@@ -101,10 +101,17 @@ This is the main website for *Family Recipes*. This website will allow customers
   
     Materialize CSS
 
+2. [Heroku](https://dashboard.heroku.com/apps)
+
+    Used to deploy app. 
+
 3. [MongoDB](https://account.mongodb.com/account/login?signedOut=true)
 
     Database usedto store recipes and site info.  
+
 4. [Google Fonts](https://fonts.google.com/specimen/Pacifico?preview.text=Pacifico&preview.text_type=custom&query=Pacifico)
+
+    Pacifico font used.
 5. [Fontawesome](https://fontawesome.com/)
     Fontawesome was used for to get icons for utensils and aa cocktail on the feast page. 
 6. [Gitpod](https://gitpod.io/workspaces/)
@@ -112,7 +119,7 @@ This is the main website for *Family Recipes*. This website will allow customers
 7. [Github](https://github.com/MichelleCoffey/A_Moveable_Feast_Shanghai/tree/1a91746d21707106faef91c699500aff9414e097)
      GitHub is hosting my repositories. 
 8. JQuery: 
-    * Is used by Bootstrap.
+    * Used for materialize
 
 9. [Balsamiq](https://balsamiq.com/)
     * Balsamiq was used to design and organise my WireFrames. 
@@ -124,6 +131,12 @@ This is the main website for *Family Recipes*. This website will allow customers
     * Shutterstock was used for the heroimage. 
 13. [BBC FOOD](https://www.bbc.co.uk/food)
     * Recipes.
+
+14. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+
+    Used for security and passwords. 
+
+15. [RandomKeyGen](https://randomkeygen.com/)
 
 
 ## Deployment 
@@ -184,54 +197,33 @@ This is the main website for *Family Recipes*. This website will allow customers
     5. Use Automatic Deployment on Heroku and Deploy Branch
 
                             
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 ## Testing 
 
 ### Photo story for first time user
 
 ### User Stories
 
- ![The Other Hong Kong homepage on mobile, ipad, ipad pro and desk top.](images/tohkresdes.png) "The Other Hong Kong on multiple displays"
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "The Other Hong Kong on multiple displays"
  
-  ![The Other Hong Kong feast page on mobile, ipad, ipad pro and desktop.](images/find.png) "Feast page on multiple devices. "
-
-  The home page greets you with a sunset over Hong Kong and a challenge to climb the mountains you usually see on the way to work. 
-
   
-  As the user scrolls dowm, the will find buttons the link to markers and infowindows on the map. The infowindows will introduce the more exciting part of Hong Kong, some history about the locations and the vistas you can expect to view. 
-
-
-  ![The Other Hong Kong contact page on mobile, ipad, ipad pro and desktop.](images/contactpage.png) "Contact page on multiple devices. "
 
   The user will have the oppourtunity to register there interest in hikes. 
 
-![successful validation confirmation](images/homevalidator.png) "Home Page HTML success."
+
 
 W3C CSS Validator Services was used to validate CSS.
 
-![successful validation confirmation](images/cssvalidator.png) "Home Page HTML success."
- * the flexbox that was pinged was actually necassary for the image and remained in the CSS.
+![successful validation confirmation](static/testing/csstest.png) "CSS Validation."
+ * This was successful.
 
-![successful validation confirmation](images/mapjsval.png) "Home Page HTML success."
+ ![successful validation confirmation](static/testing/pep8.png) "Home Page HTML success."
+ * This was successful but there was white space on blank like that would not change.
 
-![successful validation confirmation](images/mailjsval.png) "Home Page HTML success."
+![successful validation confirmation](static/images/mapjsval.png) "Home Page HTML success."
 
-![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](images/lighthouse.png) "Lighthouse score for the websites user efficency."
+![successful validation confirmation](static/images/mailjsval.png) "Home Page HTML success."
+
+![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](testing/lighthouse.png) "Lighthouse score for the websites user efficency."
 
 ### Bugs
 #### Gallery
@@ -243,16 +235,6 @@ W3C CSS Validator Services was used to validate CSS.
 * Had a glitch that made the toggler appear at all times. This was remedied by comparing my code and bootstraps code for responsive togglers. I was able to find the error in the html. 
  #### Form 
  * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
-
- #### Javascript for Maps
-
- * My mentor recommended a youtube tutorial by Sam Codes that help with my ideas and intial coding for markers and infowindows. 
-
- [Sam Codes](https://www.youtube.com/watch?v=uPhWSyRqQDA)
-
- * I then needed to link the buttons with the markers and infowindows. This was helped with tutors and with Stackoverflow onclick explanations. This caused an issue when I put function within let markers within the init map function when it needed to go before it.
-
- * Finally I needed to make sure a window would close when a new one was opened. This was also achieved by looking at another W3schools tutorial. [Stackoverflow](https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows)
 
  #### Javascript for Mail
  * My initial mail wouldn't work or was sending it when the page opened, without any input. I then had to add windowonload before the function and this worked. 

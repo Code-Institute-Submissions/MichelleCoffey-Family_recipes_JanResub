@@ -11,7 +11,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-file-signature prefix"></i>
                     <input id="recipe_name" name="recipe_name" type="text" class="validate" minlength="5" maxlength="50"
-                        required>
+                    pattern="^[^\s][a-zA-Z0-9]{5,15}$" required>
                     <label for="recipe_name">Recipe Name:</label>
                 </div>
             </div>
@@ -21,7 +21,7 @@
         <div class="input-field col s12">
             <i class="fas fa-heart prefix"></i>
             <textarea id="recipe_description" name="recipe_description" minlength="5"
-                    maxlength="500" class="materialize-textarea validate" required></textarea>
+                    maxlength="500" class="materialize-textarea validate" pattern="^[^\s][a-zA-Z0-9]{5,15}$" required></textarea>
             <label for="recipe_description">Description:</label>
         </div>
     </div>
@@ -57,7 +57,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-clipboard-list prefix"></i>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
-                        maxlength="1500" class="materialize-textarea validate" required></textarea>
+                        maxlength="1500" pattern="^[^\s][a-zA-Z0-9]{5,15}$" class="materialize-textarea validate" required></textarea>
                 <label for="recipe_ingredients">Ingredients:</label>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-mortar-pestle prefix"></i>
                 <textarea id="recipe_method" name="recipe_method" minlength="5"
-                        maxlength="5000" class="materialize-textarea validate" required></textarea>
+                        maxlength="5000" pattern="^[^\s][a-zA-Z0-9]{5,15}$" class="materialize-textarea validate" required></textarea>
                 <label for="recipe_method">Method:</label>
             </div>
         </div>   
