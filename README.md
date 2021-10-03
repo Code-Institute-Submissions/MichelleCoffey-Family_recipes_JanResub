@@ -116,9 +116,6 @@ This is the main website for *Family Recipes*. This website will allow customers
 ![successful validation confirmation](static/testing/schema.png) "Sample of Schema for database."
 
 
-
-
-
 ## Wireframes
 
 * Wireframe for the whole project. [View](wireframes/recipes.pdf)
@@ -235,9 +232,45 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 ### Photo story for first time user
 
-### User Stories
+### User Stories Testing 
+
+#### First Time User 
+
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays."
+
+ * User arrives at site and is guided to register. They must register name and password. They are prompted to add letter and not leave blank. 
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/register.png) "Family Recipes register page."
+
+ * After registering the user lands on the profile page and allows user to view recipes or add their own. 
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+
+  * User looks at recipes and searches for valid recipes. Example entering flour will give you different cakes.
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/recipes.png) "Family Recipes profile page."
+
+ * This allows them to search.
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+
+  The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/fullrecipe.png) "Family Recipes profile page."
+
+  While searching the navbar or return ing to the profile the user can add their own recipe.
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
+
+  The user may fill in the form and add their recipe. They can also use the url image option or use the default image. 
+
+  The user may also delete or edit their own recipes on the full recipe page. Once completed the user may log out.
+
+  All links are working appropriately and leading the user easily around the site. 
+
+
+## Code Testing
 
 
 W3C CSS Validator Services was used to validate CSS.

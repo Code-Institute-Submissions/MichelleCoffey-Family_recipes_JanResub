@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Home page
 @app.route("/")
 @app.route("/home")
 def home():
@@ -25,12 +26,14 @@ def home():
     return render_template("home.html", home=home)
 
 
+# Main Recipe Page
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search by category or ingredients
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -38,6 +41,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Register 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -63,6 +67,7 @@ def register():
     return render_template("register.html")
 
 
+# Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -92,6 +97,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -104,6 +110,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Log Out
 @app.route("/logout")
 def logout():
     # remove user from session cookie.
@@ -112,6 +119,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add full recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -135,6 +143,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# Edit recipes
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -159,6 +168,7 @@ def edit_recipe(recipe_id):
         "edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Delete page
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     # Delete recipe from db
@@ -167,12 +177,14 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Full recipe
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("full_recipe.html", recipe=recipe)
 
 
+# How to run app
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
