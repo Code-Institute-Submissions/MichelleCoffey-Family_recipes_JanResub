@@ -5,6 +5,7 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 ## Table of Contents
 ### [User Experience](#user-experience-(ux))
+### [Project Goals](#project-goals)
 #### [User Stories](#user-stories)
 * [First Time Visitor Goals](#first-time-visitor-goals)
 * [Returning Visitor Goals](#returning-visitor-goals)
@@ -44,40 +45,52 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 ## User Experience (UX)
 
+### Project Goals 
+
+ * A website that allows user full CRUD(Create, Read/Locate , Update and Delete) functionality. 
+
+ * Site will use HTML, CSS, jQuery, Python, Flask and MongoDB.
+
+ * Website will provide Users the chance to login, create and edit website. 
+
+ * A user friendly website.
 
  
- 1. First Time Visitor Goals
-    a. A first time user will be able to register their account.This will then allow the user to add recipes to the database. These recipes can be either private or public. Those old fanily recipes can remain precious secrets. We all know that grandma may not want everyone to know what goes into her delicious lasangne. For other home cooks they may want other families to create their own memories with their recipes. 
-      
-        
-    b. The colours are classic and conjure the image of plain white paper and black ink. The cursive style font helps suggesting old fashioned hand writing. 
 
-    The Navbar in bright white with text in black like the elegant scribblings on an old notebook. The menu goes from the center to the right and on mobile devices comes in the form of bars icon with a drop down menu on the right. 
+#### First Time Visitor Goals
+ 
+ 1. A first time user will be able to visit the site on any device. 
+ 
+ 2. A first time user will register their account.
+ 
+ 3. After registering their account the can then add a recipe, edit a recipe and search for recipes using ingredients. 
 
-        
-    c. Below the navbar is a illustration of cooking utensils with a  card atop explaining the reason for the database and prompting the user to register by hitting the registration button. Both registration and log in can also be accessed via 
+ #### Returning Visitor Goals
 
-    d. The Explore button in the navbar leads the user to main interactive component of the site. My clicking hikes, markers for five different hikes in hong kong will appear with details regarding difficulty and length of hike. 
+ 1. Will be able to login to their account. 
 
-    e. Contact will allow the user to get info to any further details about locally organised group hikes in and around Hong Kong. 
+ 2. They can also search for new recipes, add new recipes and edit old recipes. 
 
-  
- 2. Returning Visitor Goals 
-     A returning visitor will be able to log in easily and continue to update their family cookbook. They can add and edit recipes as they go. Compiling as many recipes as they like. 
-    
-3. Frequent User Goals 
-    A frequest User will see the benefits of having their family recipes on one database. They can check the old family recipes and share it with other family members and friends. They user may also want to double check how much flour goes into that victoria sponge. This site is there to remind the user. 
-           
+ #### Frequent Visitor Goals.
+
+ 1. Learn new recipes.
+
+ 2. Continue to add to their recipe book. 
+
+ 3. Double check recipes when making dinner on your mobile. 
 
 # Design 
   ## Color Scheme  
-  * Three main colors where chosen. White background, black font like a notebook and teal buttons. Red button for deletion. 
-     Colors are pinksalmon like a sunset and darkslate gray to represent the concrete jungle below.
+  * Three main colors where chosen. White background, black font like a notebook and teal buttons. 
+  
+  * Red button for deletion warning.
+   
  ## Typography 
     
   * Font used is Pacifico and cursive for logo and Oswald for the main body.  Pacifico font is to conjure the image of a notebook.
+
  ## Imagery
-  * Images used were from Unsplash, BBC Food URLs and the main hero image is fro Shutterstock.
+  * Images used were from Unsplash, BBC Food URLs and the main hero image is from Shutterstock.
   
 ## Features
 * Responsive on all devices. To be able to add recipes to a database that are then shared online. Allowing Icons that link to further social media updates.
@@ -203,12 +216,7 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 ### User Stories
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "The Other Hong Kong on multiple displays"
- 
-  
-
-  The user will have the oppourtunity to register there interest in hikes. 
-
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays."
 
 
 W3C CSS Validator Services was used to validate CSS.
@@ -223,43 +231,57 @@ W3C CSS Validator Services was used to validate CSS.
 
 ![successful validation confirmation](static/images/mailjsval.png) "Home Page HTML success."
 
-![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](testing/lighthouse.png) "Lighthouse score for the websites user efficency."
+![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](static/testing/lighthouse.png) "Lighthouse score for the websites user efficency."
 
 ### Bugs
-#### Gallery
+#### Mongodb
 
-1. Images were a little big so I used tinypng to compress them. 
-2. I used an hiking icon in the map and I got and figured out how to use this by downloading a small px hiker. 
+1. The trickiest part is connecting mongodb and to gitpod. The main issue is knowing where to add the name and password to your MONGO_URL. This seemed to have a delayed response for me as it did not initial work but worked the following morning. I use a VPN in China and can cause some glitches. First test didn't work because I had missed a closing " in my html. Once rectified it all worked and stored info in the databases.
 
-#### Navbar
-* Had a glitch that made the toggler appear at all times. This was remedied by comparing my code and bootstraps code for responsive togglers. I was able to find the error in the html. 
+#### Images and form
+* After adding a flex component to css this cause my images to distort. I removed the flex to specific areas instead. 
+
  #### Form 
  * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
 
- #### Javascript for Mail
- * My initial mail wouldn't work or was sending it when the page opened, without any input. I then had to add windowonload before the function and this worked. 
+ #### Home Page
+ * I had a link to the recipes which allowed the user to bypass login and register. I removed this from the site. 
+
+
 ## Acknowledgements
 ### Media
 * Code Institute Tutorials for providing a jumping off block. 
  * Slack for being a great source of help with either googling or when other students have provided suggestions to help improve your work. 
  * Code Institute Tutorials. 
+
  ### Individuals
  * My Mentor, Precious Ijege. 
  * Tutors at Code Institute are great guiding hand.   They do not give you the answer but ask the right questions to lead you down the correct path. It also helps build confidence. 
  * Anne Greaves and Code Institute for a comprehensive guide to writing README.md. The template was taken from the Code Institute Guide to writing README and how to write Markdown.
- * I have also used elements and the template of my first read, such as the table of contents. 
+
+ * Juan Stelling - breaktasty for a thorough README. I used elements of his and Anne Greaves README. 
+
  * Alex Harvey, a guide to writing a table of contents in gitpod. 
 
 
 #### Code
- As mentioned in bugs. 
- * My mentor recommended a youtube tutorial by Sam Codes that help with my ideas and intial coding for markers and infowindows. 
+  
 
- [Sam Codes](https://www.youtube.com/watch?v=uPhWSyRqQDA)
+ [Tim Nelson Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
 
- * I then needed to link the buttons with the markers and infowindows. This was helped with tutors and with Stackoverflow onclick explanations. This caused an issue when I put function within let markers within the init map function when it needed to go before it.
+ * This was used as the template for creating and connectimg my own python, mongodb database. 
 
- * Finally I needed to make sure a window would close when a new one was opened. This was also achieved by looking at another W3schools tutorial. [Stackoverflow](https://stackoverflow.com/questions/2223574/google-maps-auto-close-open-infowindows)
+ * Peer Code for ideas and examples implementation.
 
- #### Javascript for Mail
- * My initial mail wouldn't work or was sending it when the page opened, without any input. I then had to add windowonload before the function and this worked. 
+ * Lazy Vegan for how to deal with images in the database by  Jenny Malone.
+
+ * Juan Stelling for breaktasty for examples of README. 
+
+ ### Credits 
+
+ * BBC Food for all food pic URLS and recipes.
+
+ * Shutterstock for land page hero image by Iryn.
+
+ 
+ 
