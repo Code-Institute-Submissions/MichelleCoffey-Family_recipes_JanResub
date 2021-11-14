@@ -174,41 +174,35 @@ This is the main website for *Family Recipes*. This website will allow customers
 ### Github
 
 ### Requirements 
-  1. Github account
-  2. Gitpod account
+  1. Python3 
+  2. Github account
   3. Mongo db account
   4. Flask 
   5. heroku account
 
 
-#### The repository is hosted on github and I have therefore used github pages to deploy the site. 
-  1. On Github, go to your site's repository.
-  2. Under your repository name, click settings and scroll down to Github pages. 
-  3. Under the "Github pages:", use the None or Branch drop-down menu and select a publishing source. For a Moveable Feast, the master was selected, root and both actions were saved using the save button. A theme or custom domain were not chosen at this time. 
-  4. After saving the actions. Next click the active link on the repository page on Github. Full deployment may take a minute or two, so refresh the page and be patient. 
+#### The repository is hosted on GitHub but deployed on Heroku
+To make a local clone on Github, follow the following steps.
+
+1. Log in to GitHub and go to the repository.
+2. Click on the green button with the text “Code”.
+3. Click on “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application for instructions.     
+4. For further options and documentation please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
   
-#### Cloning of Repository to a local device.
-  1. On GitHub, again go to the main page of the repository. 
-  2. Above the ist of files, click Code. 
-  3. To clone the repository using HTTPS, under "Clone with HTTPS", click. 
-     To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click . 
-     To clone a repository using GitHub CLI, click Use GitHub CLI, then click .
-  4. Open Terminal 
-  5. Change the current working directory to the location where you want the cloned directory. 
-  6. TYpe git clone, and then paste the URL you copied eariler. 
-  7. Press Enter to create your local clone. 
+#### Working with the local copy.
+  1. Install all of the requirements. In the terminal window of your IDE type
 
-#### Working with Gitpod
-  1. Install all of the requirements. In the termianl window type pip3 install -r requirements.txt.
+     **pip3 install -r requirements.txt**
+
   2. Create a databae in Mongo db. 
-      * Sign up if needed. 
-      * Create and cluster and a database. 
-      * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values. 
+      * Sign up or login. 
+      * Create a cluster and a database. 
+      * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values for each. 
   3. Create the variables. 
-    * Create a gitignore file and create and env.py file. 
-    * Add environment variables. 
+    * Create a gitignore file and add the env.py to the gitignore to ensure that any passwords are not visible in the github repository. 
+    * Add environment variables in the env.py
 
-                  Import os
+            
               os.environ.setdefault("IP", "Added by developer")
               os.environ.setdefault("PORT", "Added by developer")
               os.environ.setdefault("SECRET_KEY", "Added by developer")
@@ -217,7 +211,8 @@ This is the main website for *Family Recipes*. This website will allow customers
           
     #### Heroku Deployment
 
-    1. In terminal window type pip3 freeze -- local > requirements.txt.
+    1. In terminal window type 
+     **pip3 freeze -- local > requirements.txt**
        * Then write python app.py > Procfile. This file is needed by Heroku. 
     2. Create a Heroku account. 
     3. Choose deployment method via Github. Search your github using the name of your repository name. 
