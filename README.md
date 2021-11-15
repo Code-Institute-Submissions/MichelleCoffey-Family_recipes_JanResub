@@ -199,6 +199,7 @@ To make a local clone on Github, follow the following steps.
       * Create a cluster and a database. 
       * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values for each. 
   3. Create the variables. 
+    * Create a env.py file by typing **touch env.py**
     * Create a gitignore file and add the env.py to the gitignore to ensure that any passwords are not visible in the github repository. 
     * Add environment variables in the env.py
 
@@ -208,19 +209,40 @@ To make a local clone on Github, follow the following steps.
               os.environ.setdefault("SECRET_KEY", "Added by developer")
               os.environ.setdefault("MONGO_URI", "Added by developer")
               os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+
+   
           
     #### Heroku Deployment
 
-    1. In terminal window type 
+
+    This project was deployed using Heroku. Heroku is a PAAS (platform as a service) that enables developer to build, run and operate applications entirely in the cloud. Heroku integrates with GitHub to make it easy to deploy code living on GitHub to apps running on Heroku.
+
+    1. In the terminal you must first need to create two files.
      **pip3 freeze -- local > requirements.txt**
-       * Then write python app.py > Procfile. This file is needed by Heroku. 
-    2. Create a Heroku account. 
-    3. Choose deployment method via Github. Search your github using the name of your repository name. 
-       *  Click on the repository to connect with it. 
-       * Add Config Vars in settings. 
-       * ENTER IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME.
-    4. Push requirements.txt and Profile from gitpod. 
-    5. Use Automatic Deployment on Heroku and Deploy Branch
+      Followed by 
+     **echo web: python app.py > Procfile**
+      These are needed for Heroku. 
+    2. Sign in or create a Heroku account. 
+        * Click 'New' on the dashboard and select 'Create new app'.
+        * Provide a unique app name including dashes, select your region, and   click  **'Create App'**.
+
+    3. Go to **delpoy** tab on the dashboard.
+       * For the **deployment method** click **Github**
+       * Provide your repository name and click **Search**, once it finds your repository, click **Connect**.
+       * Click on **Settings** and then the **Reveal Config Vars** to provide your **environment variables** from your **env.py** file to **Heroku**:
+       
+        ENTER IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME.
+
+    4. Return to your git terminal and Push **requirements.txt** and **Profile**.
+        $ git add requirements.txt
+        $ git commit -m "Add requirements.txt file."
+        $ git add Procfile 
+        $ git commit -m "Add procfile."
+        $ git push
+    5.  Return to **Heroku** and click the **deploy** tab. 
+        Then click on **Enable Automatic Deployment** followed by **Deploy Branch (main)**
+        This will take less than a minute. Once your receive the success note. Click **view** to see your live site. 
+    
 
                             
 ## Testing 
