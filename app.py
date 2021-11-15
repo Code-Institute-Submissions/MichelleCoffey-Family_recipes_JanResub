@@ -123,8 +123,8 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        is_not_gluten_free = "on" if request.form.get(
-            "is_not_gluten_free") else "off"
+        gluten_free = "Gluten free" if request.form.get(
+            "gluten_free") else "Contains gluten"
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -132,7 +132,7 @@ def add_recipe():
             "recipe_img": request.form.get("recipe_img"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
-            "is_not_gluten_free": is_not_gluten_free,
+            "gluten_free": gluten_free,
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -147,8 +147,8 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
-        is_not_gluten_free = "on" if request.form.get(
-            "is_not_gluten_free") else "off"
+        gluten_free = "on" if request.form.get(
+            "gluten_free") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -156,7 +156,7 @@ def edit_recipe(recipe_id):
             "recipe_img": request.form.get("recipe_img"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
-            "is_not_gluten_free": is_not_gluten_free,
+            "gluten_free": gluten_free,
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
