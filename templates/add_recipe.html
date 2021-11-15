@@ -11,7 +11,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-file-signature prefix"></i>
                     <input id="recipe_name" name="recipe_name" type="text" class="validate" minlength="5" maxlength="50"
-                    pattern="^[^\s][a-zA-Z0-9]{5,15}$" required>
+                    pattern="^[A-Za-z ][A-Za-z0-9!@#$%^&* ]*$" required>
                     <label for="recipe_name">Recipe Name:</label>
                 </div>
             </div>
@@ -59,6 +59,7 @@
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
                         maxlength="1500" class="materialize-textarea validate" required></textarea>
                 <label for="recipe_ingredients">Ingredients:</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Write every new ingredient on a new line.</span>
             </div>
         </div>
 
@@ -69,23 +70,20 @@
                 <textarea id="recipe_method" name="recipe_method" minlength="5"
                         maxlength="5000" class="materialize-textarea validate" required></textarea>
                 <label for="recipe_method">Method:</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Write every new instruction on a new line.</span>
             </div>
         </div>   
 
 <!--Gluten switch-->
         
-                <div class="input-field col s12">
-                    <div class="switch">
-                        <i class="fas fa-bread-slice prefix"></i>
-                        <label for="is_not_gluten_free">
-                          
-                          <input type="checkbox" id="is_not_gluten_free" name="is_not_gluten_free">
-                          <span class="lever"></span>
-                          Is not gluten free.
-                        </label>
-                    </div>
-                </div>
-            </div>  
+        <div class="input-field col s12">
+            <i class="fas fa-bread-slice prefix"></i>
+                <label for="is_not_gluten_free">
+                    <input type="checkbox" id="is_not_gluten_free" name="is_not_gluten_free">
+                    <span class="checkbox">Is gluten free.</span>
+                </label>
+            </div>
+        </div> 
 
         <!-- Submit button  -->
         <div class="row">
