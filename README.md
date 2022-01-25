@@ -262,23 +262,31 @@ To make a local clone on Github, follow the following steps.
 
  * After registering the user lands on the profile page and allows user to view recipes or add their own. 
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/successfullogin.png) "Family Recipes profile page."
 
   * User looks at recipes and searches for valid recipes. Example entering flour will give you different cakes.
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/recipes.png) "Family Recipes profile page."
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
 
  * This allows them to search.
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes profile page."
 
   The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/fullrecipe.png) "Family Recipes profile page."
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes profile page."
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe.png) "Family Recipes profile page."
 
   While searching the navbar or return ing to the profile the user can add their own recipe.
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/search.png) "Family Recipes profile page."
+
+   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/flour_recipes.png) "Family Recipes profile page."
+
+   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/more_flour_recipes.png) "Family Recipes profile page."
+
+   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/logout.png) "Family Recipes profile page."
 
   The user may fill in the form and add their recipe. They can also use the url image option or use the default image. 
 
