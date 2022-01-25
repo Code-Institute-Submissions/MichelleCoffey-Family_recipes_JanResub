@@ -48,13 +48,18 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 ### Project Goals 
 
+ * The main goal of this website is to allow families and individuals to place all those recipes, they keep on scraps of paper, or in a tatty notebook, thats tooked away in drawer in their pantry to be uploaded to database that will keep them safe. These recipes will also be passed onto other families who will enjoy them. Individuals may check recipes before they start cooking, rather than a panicked message home asking how to making Nana's sponge cake so you can impress your date. Instead the recipes are there for all of you to share. 
+
  * A website that allows user full CRUD(Create, Read/Locate , Update and Delete) functionality. 
+   Users will upload their recipes and search a database of other recipes. 
 
  * Site will use HTML, CSS, jQuery, Python, Flask and MongoDB.
 
- * Website will provide Users the chance to login, create and edit website. 
+ * The user needs to know that their recipes are safe and therefore they must log in to upload a recipe, edit and delete. Only the logged in person should be able to delete an uploaded recipe. These users are also limited to edit the recipe. You are also unable to edit another users recipes.
 
- * A user friendly website.
+ * The website should be a attractive and well layed out. All recipes are clear and easy to read with an engaging font. 
+
+
 
  
 
@@ -64,7 +69,7 @@ This is the main website for *Family Recipes*. This website will allow customers
  
  2. A first time user will register their account.
  
- 3. After registering their account the can then add a recipe, edit a recipe and search for recipes using ingredients. 
+ 3. After registering their account the can then add a recipe, edit a recipe and search for recipes using ingredients. This will provided the user with a chance to collate all their family recipes so they are never lost again. 
 
  #### Returning Visitor Goals
 
@@ -88,7 +93,7 @@ This is the main website for *Family Recipes*. This website will allow customers
    
  ## Typography 
     
-  * Font used is Pacifico and cursive for logo and Oswald for the main body.  Pacifico font is to conjure the image of a notebook.
+  * Font used is Pacifico and cursive for logo and Oswald for the main body.  Pacifico font is to conjure the image of a notebook or handwritten recipes.
 
  ## Imagery
   * Images used were from Unsplash, BBC Food URLs and the main hero image is from Shutterstock.
@@ -102,11 +107,11 @@ This is the main website for *Family Recipes*. This website will allow customers
 
 * Passwords are used with WerkZeug to protect the user. 
 
-* You can only add, edit and delete your own recipes. 
+* You can only add, edit and delete your own recipes and not other users recipes. 
 
-* The passswordmust contain between 5-20 characters. 
+* The passsword must contain between 5-20 characters. 
 
-* Recipes must also contain characters. 
+* Recipes must also contain specific patterns. 
 
 * Image Url must contain http:// or https://.
 
@@ -260,11 +265,11 @@ To make a local clone on Github, follow the following steps.
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/home.png) "Family Recipes Home page."
 
- * I click on the register button that requests a user name and passport input. 
+ * I click on the register button that requests a user name and password to be set up by the user. 
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/register.png) "Family Recipes register page."
 
- * After registering the user lands on the profile page and allows user to view recipes or add their own recipes. 
+ * After registering the user lands on the profile page with two buttons at the bottom of the page.
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/successfullogin.png) "Family Recipes profile page."
 
@@ -273,15 +278,15 @@ To make a local clone on Github, follow the following steps.
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes Add Recipe page."
 
- * The user will input details for the recipe in the form. Name, description, ingredients and method. The user can also add an image url or leave it blank so the default image can be used. The will also check the box if the recipe is gluten free. This user is adding vegetable soup and using the default image. The recipe is gluten free. After submitting the user is directed to all the recipes where the neew recipe has been added to the end. The user can then check on the card image to view the new recipe they have uploaded. All details are displaying but the user has forgotten to add an ingredient. 
+ * The user will input details for the recipe in the form. Name, description, ingredients and method. The user can also add an image url or leave it blank so the default image can be used. They will also check the box if the recipe is gluten free. This user is adding vegetable soup and using the default image. The recipe is gluten free. The user must click on a new line for eeach ingredient and new method. The aree prompted to do this in thee input. After submitting the user is directed to all the recipes where their new recipe has been added to the end. The user can then check on the card image to view the new recipe they have uploaded. All details are displaying but the user has forgotten to add an ingredient. 
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes recipe on scrolling page."
 
-   * The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
+   * The user now wants to look at the full recipe and see ingredients listed and whether or not it is gluten free. 
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes full recipe page."
 
-   * The recipe is now displaying in full. Images, name, method, ingredients and glutn free. The user can delete the recipe or edit the recipe using the buttons provided. 
+   * The recipe is now displaying in full. Images, name, method, ingredients and gluten free. The user can delete the recipe or edit the recipe using the buttons provided. The user chooses to edit so they can edit a meassurement.
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe.png) "Family Recipes edit recipe template  page."
 
@@ -289,7 +294,7 @@ To make a local clone on Github, follow the following steps.
 
    ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe_success.png) "Family Recipes edit recipe template  page."
 
-   * A message at the top of the page tells the user that they have been successful. The useer can now return to the recipes page and search. 
+   * A message at the top of the page tells the user that they have been successful. The user can now return to the recipes page and search. 
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/search.png) "Family Recipes profile page."
 
@@ -335,6 +340,10 @@ This had errors but they related to none html code on the landing page.
  #### Form 
  * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
 
+ * Added clearer instructions on the form inputs, so they were not confusing. 
+
+ * I also changed the pattern instructions in the html as it had blocked very simple inputs like two words.
+
  #### Home Page
  * I had a link to the recipes which allowed the user to bypass login and register. I removed this from the site. 
 
@@ -353,6 +362,8 @@ This had errors but they related to none html code on the landing page.
  * Juan Stelling - breaktasty for a thorough README. I used elements of his and Anne Greaves README. 
 
  * Alex Harvey, a guide to writing a table of contents in gitpod. 
+
+ * Feedback from first submission. 
 
 
 #### Code
