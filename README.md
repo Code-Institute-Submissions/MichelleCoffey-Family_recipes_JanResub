@@ -301,6 +301,7 @@ W3C CSS Validator Services was used to validate CSS.
 
 
 ![successful validation confirmation](static/testing/htmlval.png) "Home Page HTML success."
+This had errors but they related to none html code on the landing page.
 
 ![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](static/testing/lighthouse.png) "Lighthouse score for the websites user efficency."
 
@@ -342,7 +343,7 @@ W3C CSS Validator Services was used to validate CSS.
 
  * This was used as the template for creating and connectimg my own python, mongodb database. 
 
- * Peer Code for ideas and examples implementation.
+ * Peer Code for ideas and examples of how to execute my website.
 
  * Lazy Vegan for how to deal with images in the database by  Jenny Malone.
 
