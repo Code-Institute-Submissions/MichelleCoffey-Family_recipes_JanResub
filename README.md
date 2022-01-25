@@ -256,43 +256,54 @@ To make a local clone on Github, follow the following steps.
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays."
 
- * User arrives at site and is guided to register. They must register name and password. They are prompted to add letter and not leave blank. 
+ 1. As a user I am able to use the site on any devise. I am greeted with a colorful landing page, that encourages me to register by clicking the button.
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/home.png) "Family Recipes Home page."
+
+ * I click on the register button that requests a user name and passport input. 
 
  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/register.png) "Family Recipes register page."
 
- * After registering the user lands on the profile page and allows user to view recipes or add their own. 
+ * After registering the user lands on the profile page and allows user to view recipes or add their own recipes. 
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/successfullogin.png) "Family Recipes profile page."
 
-  * User looks at recipes and searches for valid recipes. Example entering flour will give you different cakes.
+  * The user is now in the profile page. There are two buttons that will allow the user to go to recipes or to add their own. This user will first add their own recipe.
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
 
- * This allows them to search.
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes Add Recipe page."
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes profile page."
+ * The user will input details for the recipe in the form. Name, description, ingredients and method. The user can also add an image url or leave it blank so the default image can be used. The will also check the box if the recipe is gluten free. This user is adding vegetable soup and using the default image. The recipe is gluten free. After submitting the user is directed to all the recipes where the neew recipe has been added to the end. The user can then check on the card image to view the new recipe they have uploaded. All details are displaying but the user has forgotten to add an ingredient. 
 
-  The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes recipe on scrolling page."
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes profile page."
+   * The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe.png) "Family Recipes profile page."
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/full_recipe.png) "Family Recipes full recipe page."
 
-  While searching the navbar or return ing to the profile the user can add their own recipe.
+   * The recipe is now displaying in full. Images, name, method, ingredients and glutn free. The user can delete the recipe or edit the recipe using the buttons provided. 
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe.png) "Family Recipes edit recipe template  page."
+
+  * The user will find all the fields are filled and ready to be edited. The user changes a measuremeent in ingredients and clicks edit. 
+
+   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/edit_recipe_success.png) "Family Recipes edit recipe template  page."
+
+   * A message at the top of the page tells the user that they have been successful. The useer can now return to the recipes page and search. 
 
   ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/search.png) "Family Recipes profile page."
 
+  * The input indicates you can search using name or ingredients. The user inputs flour into the search bar. 
+
    ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/flour_recipes.png) "Family Recipes profile page."
+
+   * The user is given a list of recipes that contain flour to scroll through.
 
    ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/more_flour_recipes.png) "Family Recipes profile page."
 
    ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/logout.png) "Family Recipes profile page."
 
-  The user may fill in the form and add their recipe. They can also use the url image option or use the default image. 
-
-  The user may also delete or edit their own recipes on the full recipe page. Once completed the user may log out.
-
-  All links are working appropriately and leading the user easily around the site. 
+  * The user can now log out and return at a later day. 
 
 
 ## Code Testing
